@@ -1,0 +1,59 @@
+
+nodeJS?
+- nodeJS는 chrome V8 JavaScript 엔진으로 빌드된 JS런타임(실행환경)
+
+  nodsJS를 씁니다...
+  nodeJS = 백엔드 ? = 대중적으로는 그렇게 쓰이고 있습니다
+  그러나 nodeJS가 백엔드라는 말은 아닙니다.
+
+  ex) express,nestJS,http,fs...
+
+  => nestJS (함수형 =>oop->객체지향형태 (spring))
+  => nodeJS (express)
+
+  백과 프론트를 같은 언어로 사용할수있음
+  웹서버(Apache,zeus,nginx) 와 WAS(tomcat...) 같은 소프트웨어가 필요 없이 웹 서버 역할을 대신하는 내장 라이브러리 존재
+
+  실제로 서비스를 할때는 웹서버 띄워야함
+
+  npm init
+  => packsage.json을 만들어주는 역할
+
+  node 파일명 ==>실행문
+
+--------------------------------------------------------
+
+    fs,http =express나 백엔드 서버를 만드릭위해 지원하는 가장 기본적인 모듈
+
+    fs 모듈
+        - 파일처리와 관련된 모듈 
+        nodejs http와 함꼐 가장 기초적인 모듈
+
+        readFile()      :  파일을 비동기적으로 읽음
+        readFileSync()  :  파일을 동기적으로 읽음
+        
+        writeFile()     :  파일을 비동기적으로 씀
+        writeFileSync() :  파일을 동기적으로 씀
+     
+    예외처리하는 방법
+
+    비동기: .then("성공")
+            .catch("실패")
+
+            (err)=>{
+                if(err){
+                    "실패"
+                }
+                else{
+                    "성공"
+                }
+            }
+    
+    동기 : try{
+            예외가 발생할 수있는 문장
+            }catch(e:결과값){
+                예외가 발생했을 경우 수행할 문장
+            }
+
+    
+--------------------------------------------------------
