@@ -1,0 +1,66 @@
+[요즘 가장 핫한 스택]
+
+burnJS [nodeJS,npm,웹팩,번들러]
+
+[백엔드]
+우리나라  
+1.jsp,spring
+2.spring boot(대체불가)
+3.nodeJS [express + sequlize,nestJS+ TypeORM]
+ (스타트업,고연봉,신상)
+4.python [Django,Flask,FestAPI]
+
+웹앱이아닌경우:python, rust, go, c,c++,c#...
+모바일:kotiln,swift
+[프론트]
+1. ReactJS [reactJS,nextJS]
+2. VueJS
+3. AngularJS
+4. typme leaf
++react-native,flutter,kotiln,swift
++vite,wepback
+
+---------------------------------------------------
+
+npm i express mysql2 sequelize sequelize-cli dotenv
+
+    mysql2
+     - nodeJS mySQL 연결해주는 라이브러리
+
+    sequlize 
+     - ORM, 쿼리문이 없어도 명령문만으로 DB를 관리, 단 순수 쿼리문도 사용이 가능
+
+    sequlize-cli   
+     - sequlize 부가적기능, 백업, 테이블 수정
+    
+    dotenv
+     - .env 파일을 통해 밖으로 유출되면 안되는 값을 변수화 시켜서 프로젝트 안에서 접근할 수 있도록
+
+---------------------------------------------------
+
+DB의 테이블끼리의 관계
+
+1:1 관계 
+1:N 관계 
+N:N 관계
+
+---------------------------------------------------
+
+npx sequelize init
+    sequelize설정 파일 생성, 해당 명령어 없이 폴더명 이름만 맞춰줘도 생성 가능
+
+    config
+      DB연결 설정
+
+    models
+      스키마와 테이블 정의
+      
+    migrations
+      테이블 수정
+    
+    seeders
+      백업
+      
+
+---------------------------------------------------
+
