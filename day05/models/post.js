@@ -7,14 +7,9 @@ export default class Post extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
-        id: {
-          type: Sequelize.STRING(100),
-          allowNull: false, //notnull
-          comment: "id값",
-        },
         content: {
-          type: Sequelize.STRING(1000),
-
+          type: Sequelize.TEXT(1000),
+          allowNull: false,
           comment: "내용",
         },
       },
@@ -22,13 +17,15 @@ export default class Post extends Sequelize.Model {
         sequelize,
         timestamps: true,
         modelName: "Post",
-        tableName: "post",
-        charset: "utf8",
-        collage: "utf8_general_ci",
+        tableName: "posts",
+        charset: "utf8mb4",
+        collage: "utf8mb4_general_ci",
       }
     );
   }
   static associate(db) {
+    db.User.hasMany(db.Post, { foreignKey: "userIdx" });
+
     // 관계 설정
     /*
     1:N
@@ -44,5 +41,7 @@ export default class Post extends Sequelize.Model {
     db.User.belognToMany(db.Post,{through:"likes"})
     
     */
+
+    db.Post.belongsTo(db.User, { foreignKey: "userIdx" });
   }
 }
