@@ -1,5 +1,5 @@
 import express from "express";
-import UserService from "../sevice/userService";
+import UserService from "../service/user.js";
 
 const router = express.Router();
 router.post("/signup", UserService.signUp);
